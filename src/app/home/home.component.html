@@ -1,0 +1,80 @@
+<div class="container bg-cream">
+  <div class="row p-3 bg-dark">
+    <div class="d-flex justify-content-between" style="overflow-x: scroll;">
+      <app-characters
+        *ngFor="let character of characters"
+        [character]="character"
+        [isSelected]="character.id === selectedCharacter.id"
+        (chrClick)="characterClick($event)"
+      ></app-characters>
+    </div>
+  </div>
+  <div class="row text-center text-white bg-dark">
+    <div class="col-2"></div>
+    <div class="col-8 p-2">
+      <h1>{{ selectedCharacter.name }}</h1>
+    </div>
+    <div class="col-2 p-2">
+      <button
+        class="shadow"
+        title="Copy sharable url"
+        style="background-color: #313e66; color: white;"
+        mat-mini-fab
+        (click)="displaySnackBar()"
+        [cdkCopyToClipboard]="generateUrl()"
+        aria-label="Share url"
+      >
+        <mat-icon>share</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="row p-2">
+    <div
+      *ngIf="selectedCharacter.abilities.length === 5"
+      class="col-md-1"
+    ></div>
+    <app-ability
+      class="col-md-2 p-1"
+      *ngFor="let ability of selectedCharacter.abilities"
+      [ability]="ability"
+    ></app-ability>
+  </div>
+  <div class="row p-3">
+    <div class="col-md-6 p-0 text-white">
+      <div class="white-border" *ngIf="displayedSkill">
+        <div class="p-2 d-flex bg-dark-blue">
+          <img
+            class="p-3 skill-selected rounded-border"
+            style="width: 150px;"
+            [src]="displayedSkill.imagePath"
+          />
+          <div class="p-2">
+            <h2 class="p-2">{{ displayedSkill.name }}</h2>
+            <p class="p-2">Level {{ displayedSkill.levelReq }}</p>
+          </div>
+        </div>
+        <div class="bg-md-blue p-2 px-5 text-center">
+          <span>{{ displayedSkill.desc }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 bg-md-blue white-border">
+      <div class="row text-center text-white bg-dark-blue">
+        <div class="col-3 p-3">
+          <img class="svg" style="width: 50px;" src="/assets/essence.svg" />
+        </div>
+        <div class="col-9 d-flex justify-content-center align-items-center">
+          <h3 class="p-2 m-0">ESSENCE UPGRADES</h3>
+        </div>
+      </div>
+      <div class="vl"></div>
+      <app-skill-tree
+        [selectedSvgCss]="selectedCharacter.selectedSvgCss"
+        [selectedCss]="selectedCharacter.selectedCssAlt"
+        [skillTree]="selectedCharacter.skillTree"
+        (skillSelected)="skillSelected($event)"
+        (displaySkill)="displaySkill($event)"
+      ></app-skill-tree>
+    </div>
+  </div>
+</div>

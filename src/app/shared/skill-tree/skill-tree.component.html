@@ -1,0 +1,82 @@
+<div class="row">
+  <div class="col-3 d-flex justify-content-center align-items-center">
+    <div class="p-1 bg-lt-blue rounded-border-lt">
+      LVL 1
+    </div>
+  </div>
+  <div class="col-3" *ngFor="let skill of skillTree.tierOneSkills">
+    <app-skill
+      class="btn"
+      [selectedCss]="selectedCss"
+      [selectedSvgCss]="selectedSvgCss"
+      [skill]="skill"
+      [selected]="skill.id === skillTree.selectedTierOneSkill.id"
+      (click)="selectSkill(1, skill)"
+      (mouseenter)="mouseEnter(skill)"
+    ></app-skill>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3 d-flex justify-content-center align-items-center">
+    <p class="p-1 bg-lt-blue rounded-border-lt">LVL 2</p>
+  </div>
+  <div class="col-3" *ngFor="let skill of skillTree.tierTwoSkills">
+    <app-skill
+      class="btn"
+      [selectedCss]="selectedCss"
+      [selectedSvgCss]="selectedSvgCss"
+      [skill]="skill"
+      [selected]="skill.id === skillTree.selectedTierTwoSkill.id"
+      (click)="selectSkill(2, skill)"
+      (mouseenter)="mouseEnter(skill)"
+    ></app-skill>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3 d-flex justify-content-center align-items-center">
+    <p class="p-1 bg-lt-blue rounded-border-lt">LVL 3</p>
+  </div>
+  <div class="col-3" *ngFor="let skill of skillTree.tierThreeSkills">
+    <app-skill
+      class="btn"
+      [selectedCss]="selectedCss"
+      [selectedSvgCss]="selectedSvgCss"
+      [skill]="skill"
+      [selected]="skill.id === skillTree.selectedTierThreeSkill.id"
+      (click)="selectSkill(3, skill)"
+      (mouseenter)="mouseEnter(skill)"
+    ></app-skill>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3 d-flex justify-content-center align-items-center">
+    <p class="p-1 bg-lt-blue rounded-border-lt">LVL 4</p>
+  </div>
+  <div class="col-3" *ngFor="let skill of skillTree.tierFourSkills">
+    <app-skill
+      class="btn"
+      [selectedCss]="selectedCss"
+      [selectedSvgCss]="selectedSvgCss"
+      [skill]="skill"
+      [selected]="skill.id === skillTree.selectedTierFourSkill.id"
+      (click)="selectSkill(4, skill)"
+      (mouseenter)="mouseEnter(skill)"
+    ></app-skill>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3 d-flex justify-content-center align-items-center">
+    <p class="p-1 bg-lt-blue rounded-border-lt">LVL 5</p>
+  </div>
+  <div class="col-3" *ngFor="let skill of skillTree.tierFiveSkills">
+    <app-skill
+      class="btn"
+      [selectedCss]="selectedCss"
+      [selectedSvgCss]="selectedSvgCss"
+      [skill]="skill"
+      [selected]="skill.id === skillTree.selectedTierFiveSkill.id"
+      (click)="selectSkill(5, skill)"
+      (mouseenter)="mouseEnter(skill)"
+    ></app-skill>
+  </div>
+</div>

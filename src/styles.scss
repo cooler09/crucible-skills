@@ -1,0 +1,161 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html,
+body {
+  height: 100%;
+  background-image: url("./assets/conquest-background_ui.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d9d9d6;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#1773dd, #00dadd);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(#00dadd, #1773dd);
+}
+.vl {
+  border-left: 6px solid white;
+  height: 300px;
+  position: absolute;
+
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.opac-50 {
+  opacity: 0.5;
+}
+.bg-cream {
+  background-color: #d9d9d6;
+}
+.bg-lt-blue {
+  background-color: #00dadd;
+}
+.bg-brand-blue {
+  background-image: linear-gradient(#00dadd, #1773dd);
+}
+.bg-dk-blue {
+  background-color: #1773dd;
+}
+.bg-md-blue {
+  background-color: #313e66;
+}
+.bg-dark-blue {
+  background-color: #020e2b;
+}
+.bg-med-grey {
+  background-color: #888b8d;
+}
+.bg-dark-grey {
+  background-color: #333b3d;
+}
+.bg-black {
+  background-color: #1a1d1e;
+}
+.bg-ajonah {
+  background-color: #4df6e3;
+}
+.bg-ajonah-alt {
+  background-color: #9a88fe;
+}
+.bg-bugg {
+  background-color: #ffe900;
+}
+.bg-bugg-alt {
+  background-color: #add359;
+}
+.bg-drakahl {
+  background-color: #989e95;
+}
+.bg-drakahl-alt {
+  background-color: #be401e;
+}
+.bg-earl {
+  background-color: #ba9380;
+}
+.bg-earl {
+  background-color: #1ca4c4;
+}
+.bg-mendoza {
+  background-color: #99cc66;
+}
+.bg-mendoza-alt {
+  background-color: #34410b;
+}
+.bg-summer {
+  background-color: #ff9900;
+}
+.bg-summer-alt {
+  background-color: #ff6699;
+}
+.bg-tosca {
+  background-color: #ccd78b;
+}
+.bg-tosca-alt {
+  background-color: #bf3439;
+}
+.bg-shakirri {
+  background-color: #a1a6cc;
+}
+.bg-shakirri-alt {
+  background-color: #4b0a0e;
+}
+.bg-sazan {
+  background-color: #6b9aaa;
+}
+.bg-sazan-alt {
+  background-color: #4f3654;
+}
+.bg-rahi {
+  background-color: #cc9900;
+}
+.bg-rahi-alt {
+  background-color: #115c95;
+}
+.svg {
+  filter: invert(99%) sepia(20%) saturate(2%) hue-rotate(206deg)
+    brightness(105%) contrast(100%);
+}
+.rounded-border {
+  border-radius: 15px;
+}
+.rounded-border-lt {
+  border-radius: 5px;
+}
+.skill-selected {
+  background-color: white;
+  border: 2px solid #020e2b;
+}
+.skill-unselected {
+  background-color: #020e2b;
+  border: 2px solid white;
+}
+.white-border {
+  border: 2px solid white;
+}
+
+.show-more {
+  cursor: pointer;
+  display: block;
+  width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

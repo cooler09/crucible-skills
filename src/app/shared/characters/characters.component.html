@@ -1,0 +1,7 @@
+<div class="p-2 btn" [class]="isSelected ? character.selectedCss : ''">
+  <img
+    style="width: 200px;"
+    (click)="characterClick(character)"
+    [src]="character.imagePath"
+  />
+</div>

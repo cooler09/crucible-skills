@@ -1,0 +1,147 @@
+import { Ability } from "../ability";
+import { AbilityType } from "../ability-type.enum";
+import { Skill } from "../skill";
+import { SkillTree } from "../skill-tree";
+
+export default class RahiData {
+  static loadAbilities(): Ability[] {
+    return [
+      new Ability(
+        51,
+        "SHOOT LASER BEAM",
+        "Fires laser for piercing damage. Attack generates small amount of shields.",
+        AbilityType.LEFT_CLICK,
+        "/assets/characters/rahi/hero_primary.svg"
+      ),
+      new Ability(
+        52,
+        "FORCE PUNCH",
+        "Heavy melee attack. Drains personal shields to deal additional damage.",
+        AbilityType.RIGHT_CLICK,
+        "/assets/characters/rahi/hero_force_punch.svg"
+      ),
+      new Ability(
+        53,
+        "BROTHER'S WATCHFUL GAZE/SCOUTING AHEAD",
+        "Passive: When Brother is with Rahi, detects any enemies that deal damage to Rahi. Scouting Ahead: Brother moves to target location.",
+        AbilityType.LSHIFT,
+        "/assets/characters/rahi/hero_bot_teleport.svg"
+      ),
+      new Ability(
+        54,
+        "TO THE RESCUE",
+        "While Scouting ahead is active, tap again to have Rahi teleport to Brother's location.",
+        AbilityType.LSHIFT,
+        "/assets/characters/rahi/hero_send_bot.svg"
+      ),
+      new Ability(
+        55,
+        "SHIELD OF JUSTICE",
+        "Send projectile to shield allies, blinding enemies in path.",
+        AbilityType.E,
+        "/assets/characters/rahi/hero_send_shield.svg"
+      ),
+      new Ability(
+        56,
+        "LAUGH IT OFF",
+        "Gain personal shield which increases over time.",
+        AbilityType.Q,
+        "/assets/characters/rahi/hero_shield_self.svg"
+      ),
+    ];
+  }
+  static loadSkillTree(): SkillTree {
+    let skillTree = new SkillTree();
+    skillTree.tierOneSkills = [
+      new Skill(
+        51,
+        1,
+        "Continual Overshield",
+        "Passive shield regeneration of 6 shields per second.",
+        "/assets/characters/rahi/hero_shield_regen.svg"
+      ),
+      new Skill(
+        52,
+        1,
+        "Justice for All",
+        "Shield of Justice is larger and travels farther.",
+        "/assets/characters/rahi/hero_improved_orb.svg"
+      ),
+      new Skill(
+        53,
+        1,
+        "Concussive Punch",
+        "Force Punch creates a projectile, increasing its range to 20 meters.",
+        "/assets/characters/rahi/hero_punch_wave.svg"
+      ),
+    ];
+    skillTree.selectedTierOneSkill = skillTree.tierOneSkills[0];
+
+    skillTree.tierTwoSkills = [
+      new Skill(
+        54,
+        2,
+        "Laser Precision",
+        "Knuckleduster deals more damage the longer it remains connected to any target.",
+        "/assets/characters/rahi/hero_beam_focus.svg"
+      ),
+    ];
+    skillTree.selectedTierTwoSkill = skillTree.tierTwoSkills[0];
+
+    skillTree.tierThreeSkills = [
+      new Skill(
+        55,
+        3,
+        "Overshield Tune-up",
+        "Brother's Shields maximum increased to 300.",
+        "/assets/characters/rahi/hero_max_shield.svg"
+      ),
+      new Skill(
+        56,
+        3,
+        "Shields up!",
+        "Shield of Justice grants additional shields.",
+        "/assets/characters/rahi/hero_shielding_ratio.svg"
+      ),
+      new Skill(
+        57,
+        3,
+        "Pushing the Boundaries",
+        "Force Punch can expend up to 150 shields, increasing damage output to a maximum of 300.",
+        "/assets/characters/rahi/hero_punch_big.svg"
+      ),
+    ];
+    skillTree.selectedTierThreeSkill = skillTree.tierThreeSkills[0];
+
+    skillTree.tierFourSkills = [
+      new Skill(
+        58,
+        4,
+        "All in the Timing",
+        "Laugh It Off movement speed and shields granted are increased.",
+        "/assets/characters/rahi/hero_laugh_speed.svg"
+      ),
+    ];
+    skillTree.selectedTierFourSkill = skillTree.tierFourSkills[0];
+
+    skillTree.tierFiveSkills = [
+      new Skill(
+        59,
+        5,
+        "Knuckleduster Charge-up",
+        "Knuckleduster Laser Beam hits now generates additional shields.",
+        "/assets/characters/rahi/hero_beam_shield.svg"
+      ),
+      new Skill(
+        60,
+        5,
+        "Save the Day!",
+        "When Rahi lands during To the Rescue, he knocks back nearby enemies and grants nearby allies 150 strength shields.",
+        "/assets/characters/rahi/hero_teleport_shield.svg"
+      ),
+    ];
+    skillTree.selectedTierFiveSkill = skillTree.tierFiveSkills[0];
+
+    return skillTree;
+  }
+}
