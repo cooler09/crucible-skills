@@ -2,13 +2,13 @@
   class="p-2 text-center text-white rounded-border border-white bg-md-blue"
   style="height: 100%;"
 >
-  <h3>
+  <h3 class="m-0 m-0">
     {{ ability.name }}
   </h3>
-  <div class="p-2">
-    <img class="svg" style="width: 75px;" [src]="ability.imagePath" />
+  <div class="p-1">
+    <img class="svg" style="width: 60px;" [src]="ability.imagePath" />
   </div>
-  <div class="p-2">
+  <div>
     <p
       (click)="toggleShow()"
       [class.show-more]="!showMore && ability.desc.length > 200"
