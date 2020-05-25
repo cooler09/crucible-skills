@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) {
     this.characters = MockData.mockCharacters();
     this.selectedCharacter = this.characters[0];
+    this.displayedSkill = this.selectedCharacter.skillTree.tierOneSkills[0];
   }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
@@ -79,6 +80,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
   characterClick(character: Character) {
     this.selectedCharacter = character;
+    this.displayedSkill = character.skillTree.tierOneSkills[0];
   }
   skillSelected(data: any) {
     if (data) {
