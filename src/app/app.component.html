@@ -56,7 +56,8 @@
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </div>
-<div class="d-flex justify-content-center">
+<router-outlet></router-outlet>
+<div *ngIf="!supporter" class="d-flex justify-content-center">
   <div *ngIf="!supporter">
     <script
       async
@@ -75,7 +76,6 @@
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
-  <router-outlet></router-outlet>
   <div *ngIf="!supporter">
     <script
       async
