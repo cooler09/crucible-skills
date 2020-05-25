@@ -7,6 +7,13 @@ export default class SazanData {
   static loadAbilities(): Ability[] {
     return [
       new Ability(
+        66,
+        "GUERRILLA WARFARE",
+        "Move faster when crouching, including when in detect mode and when using med kits.",
+        AbilityType.LEFT_CLICK,
+        "/assets/characters/sazan/commando_passive.svg"
+      ),
+      new Ability(
         61,
         "ATTACK",
         "Attack with equipped weapon.",

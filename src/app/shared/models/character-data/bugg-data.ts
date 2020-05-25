@@ -7,6 +7,13 @@ export default class BuggData {
   static loadAbilities(): Ability[] {
     return [
       new Ability(
+        16,
+        "Anti-Grav",
+        "Move the same speed in all directions, regardless of facing.",
+        AbilityType.Q,
+        "/assets/characters/bugg/robotanist_passive.svg"
+      ),
+      new Ability(
         11,
         "SPRAY",
         "Damages opponents and activates seed pods.",

@@ -7,6 +7,13 @@ export default class ToscaData {
   static loadAbilities(): Ability[] {
     return [
       new Ability(
+        96,
+        "Works Well Under Pressure",
+        "Interact with object in games faster.",
+        AbilityType.LEFT_CLICK,
+        "/assets/characters/tosca/inventor_interact_speed.svg"
+      ),
+      new Ability(
         91,
         "FIRE",
         "Fires a scattershot of acid bullets.",

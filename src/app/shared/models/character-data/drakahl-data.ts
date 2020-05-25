@@ -7,6 +7,13 @@ export default class DrakahlData {
   static loadAbilities(): Ability[] {
     return [
       new Ability(
+        26,
+        "Jink",
+        "Jet quickly in your current direction.",
+        AbilityType.PASSIVE,
+        "/assets/characters/drakahl/fighter_air_dash.svg"
+      ),
+      new Ability(
         21,
         "CHOP",
         "Strike with vibron axe.",

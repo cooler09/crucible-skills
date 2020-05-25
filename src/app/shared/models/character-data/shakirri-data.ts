@@ -7,6 +7,13 @@ export default class ShakirriData {
   static loadAbilities(): Ability[] {
     return [
       new Ability(
+        76,
+        "STARLOCK ENERGY",
+        "Pistol energy regenerates over time.",
+        AbilityType.LEFT_CLICK,
+        "/assets/characters/shakirri/duelist_passive.svg"
+      ),
+      new Ability(
         71,
         "SHOOT / SWING",
         "Pistol stance: Fire your pistol. Sword stance: Attack with your sword.",

@@ -7,6 +7,13 @@ export default class EarlData {
   static loadAbilities(): Ability[] {
     return [
       new Ability(
+        36,
+        "Turbofire",
+        "Firing weapons creates Turbofire, increasing rate of fire.",
+        AbilityType.Q,
+        "/assets/characters/earl/minigunner_passive.svg"
+      ),
+      new Ability(
         31,
         "FIRE",
         "Fires Misty, increasing Turbofire. Turbofire increases fire rate over time.",

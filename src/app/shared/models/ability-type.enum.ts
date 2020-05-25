@@ -4,4 +4,5 @@ export enum AbilityType {
   Q = 2,
   E = 3,
   RIGHT_CLICK = 4,
+  PASSIVE = 5,
 }

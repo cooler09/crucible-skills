@@ -7,6 +7,13 @@ export default class SummerData {
   static loadAbilities(): Ability[] {
     return [
       new Ability(
+        86,
+        "Heat",
+        "Abilities generate heat. If overheated, abilities shut down for 5 seconds.",
+        AbilityType.LEFT_CLICK,
+        "/assets/characters/summer/pyro_passive.svg"
+      ),
+      new Ability(
         81,
         "FLAMETHROWERS",
         "Fires a continuous cone of flame. Enemies do not block line of fire. Generates heat. Abilities shut down when overheated.",
