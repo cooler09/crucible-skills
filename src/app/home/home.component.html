@@ -33,11 +33,11 @@
       *ngIf="selectedCharacter.abilities.length === 5"
       class="col-md-1"
     ></div>
-    <app-ability
+    <app-ability-container
       class="col-md-2 p-1"
       *ngFor="let ability of selectedCharacter.abilities"
       [ability]="ability"
-    ></app-ability>
+    ></app-ability-container>
   </div>
   <div class="row p-3">
     <div class="col-md-6 p-0 text-white">

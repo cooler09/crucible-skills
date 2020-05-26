@@ -1,26 +1,21 @@
-<div
-  class="p-2 text-center text-white rounded-border border-white bg-md-blue"
-  style="height: 100%;"
->
-  <h3 class="m-0 m-0">
-    {{ ability.name }}
-  </h3>
-  <div class="p-1">
-    <img class="svg" style="width: 60px;" [src]="ability.imagePath" />
-  </div>
-  <div>
-    <p
-      (click)="toggleShow()"
-      [class.show-more]="!showMore && ability.desc.length > 200"
-    >
-      {{ ability.desc }}
-    </p>
-    <p
-      (click)="toggleShow()"
-      *ngIf="ability.desc.length > 200"
-      style="text-decoration: underline; cursor: pointer;"
-    >
-      {{ !showMore ? "Show More" : "Show Less" }}
-    </p>
-  </div>
+<h3 class="m-0 m-0">
+  {{ name }}
+</h3>
+<div class="p-1">
+  <img class="svg" style="width: 60px;" [src]="imagePath" />
+</div>
+<div class="p-1 d-flex justify-content-center">
+  <div class="p-1 border-white">{{ type }}</div>
+</div>
+<div>
+  <p (click)="toggleShow()" [class.show-more]="!showMore && desc.length > 200">
+    {{ desc }}
+  </p>
+  <p
+    (click)="toggleShow()"
+    *ngIf="desc.length > 200"
+    style="text-decoration: underline; cursor: pointer;"
+  >
+    {{ !showMore ? "Show More" : "Show Less" }}
+  </p>
 </div>

@@ -7,6 +7,25 @@ export default class RahiData {
   static loadAbilities(): Ability[] {
     return [
       new Ability(
+        55,
+        "",
+        "",
+        AbilityType.PASSIVE,
+        "",
+        true,
+        [
+          "When Brother is with Rahi, detects enemies that damage to Rahi. When Scouting Ahead, detects enemies in his LoS.",
+          "Rahi has a 300 strength maximum capacity overshield.",
+          "Hold to power up super jump when released.",
+        ],
+        ["Brother's Watchful Gaze", "Brother's Shields", "Heroic Bound"],
+        [
+          "/assets/characters/rahi/hero_bot_passive.svg",
+          "/assets/characters/rahi/hero_shield_passive.svg",
+          "/assets/characters/rahi/hero_super_jump.svg",
+        ]
+      ),
+      new Ability(
         51,
         "SHOOT LASER BEAM",
         "Fires laser for piercing damage. Attack generates small amount of shields.",
@@ -36,11 +55,10 @@ export default class RahiData {
         "",
         true,
         [
-          "Passive: When Brother is with Rahi, detects any enemies that deal damage to Rahi. Scouting Ahead: Brother moves to target location.",
-          ,
+          "Brother moves to target location. Tap again to have Rahi teleport to Brother's location.",
           "While Scouting ahead is active, tap again to have Rahi teleport to Brother's location.",
         ],
-        ["BROTHER'S WATCHFUL GAZE/SCOUTING AHEAD", "TO THE RESCUE"],
+        ["SCOUTING AHEAD", "TO THE RESCUE"],
         [
           "/assets/characters/rahi/hero_bot_teleport.svg",
           "/assets/characters/rahi/hero_send_bot.svg",
