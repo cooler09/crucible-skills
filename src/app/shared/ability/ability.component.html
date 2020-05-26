@@ -5,7 +5,7 @@
   <img class="svg" style="width: 60px;" [src]="imagePath" />
 </div>
 <div class="p-1 d-flex justify-content-center">
-  <div class="p-1 border-white">{{ type }}</div>
+  <div class="p-1 white-border bg-dark-blue rounded-border-lt">{{ type }}</div>
 </div>
 <div>
   <p (click)="toggleShow()" [class.show-more]="!showMore && desc.length > 200">
