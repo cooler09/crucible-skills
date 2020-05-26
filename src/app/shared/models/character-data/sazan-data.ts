@@ -10,43 +10,67 @@ export default class SazanData {
         66,
         "GUERRILLA WARFARE",
         "Move faster when crouching, including when in detect mode and when using med kits.",
-        AbilityType.LEFT_CLICK,
-        "/assets/characters/sazan/commando_passive.svg"
+        AbilityType.PASSIVE,
+        "/assets/characters/sazan/commando_passive.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         61,
         "ATTACK",
         "Attack with equipped weapon.",
         AbilityType.LEFT_CLICK,
-        "/assets/characters/sazan/commando_primary.svg"
+        "/assets/characters/sazan/commando_primary.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         62,
         "ELECTROKNIFE",
         "Equip electroknife, which applies a long-lasting DoT upon hit. Recharges weapon energy.",
         AbilityType.RIGHT_CLICK,
-        "/assets/characters/sazan/commando_knifeswap.svg"
+        "/assets/characters/sazan/commando_knifeswap.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         63,
         "JET-DASH",
         "Dash in the direction of movement.",
         AbilityType.LSHIFT,
-        "/assets/characters/sazan/commando_dash.svg"
+        "/assets/characters/sazan/commando_dash.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         64,
         "SHOTGUN",
         "Equip shotgun, which fires a powerful short-range burst. Recharges weapon energy.",
         AbilityType.E,
-        "/assets/characters/sazan/commando_shotgunswap.svg"
+        "/assets/characters/sazan/commando_shotgunswap.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         65,
         "INERTIA GUN",
         "Equip inertia gun, which applies a stacking slow effect upon hit. Recharges weapon energy.",
         AbilityType.Q,
-        "/assets/characters/sazan/commando_inertiagunswap.svg"
+        "/assets/characters/sazan/commando_inertiagunswap.svg",
+        false,
+        [],
+        [],
+        []
       ),
     ];
   }

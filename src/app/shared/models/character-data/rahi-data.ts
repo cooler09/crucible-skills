@@ -11,42 +11,62 @@ export default class RahiData {
         "SHOOT LASER BEAM",
         "Fires laser for piercing damage. Attack generates small amount of shields.",
         AbilityType.LEFT_CLICK,
-        "/assets/characters/rahi/hero_primary.svg"
+        "/assets/characters/rahi/hero_primary.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         52,
         "FORCE PUNCH",
         "Heavy melee attack. Drains personal shields to deal additional damage.",
         AbilityType.RIGHT_CLICK,
-        "/assets/characters/rahi/hero_force_punch.svg"
+        "/assets/characters/rahi/hero_force_punch.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         53,
-        "BROTHER'S WATCHFUL GAZE/SCOUTING AHEAD",
-        "Passive: When Brother is with Rahi, detects any enemies that deal damage to Rahi. Scouting Ahead: Brother moves to target location.",
+        "",
+        "",
         AbilityType.LSHIFT,
-        "/assets/characters/rahi/hero_bot_teleport.svg"
+        "",
+        true,
+        [
+          "Passive: When Brother is with Rahi, detects any enemies that deal damage to Rahi. Scouting Ahead: Brother moves to target location.",
+          ,
+          "While Scouting ahead is active, tap again to have Rahi teleport to Brother's location.",
+        ],
+        ["BROTHER'S WATCHFUL GAZE/SCOUTING AHEAD", "TO THE RESCUE"],
+        [
+          "/assets/characters/rahi/hero_bot_teleport.svg",
+          "/assets/characters/rahi/hero_send_bot.svg",
+        ]
       ),
       new Ability(
         54,
-        "TO THE RESCUE",
-        "While Scouting ahead is active, tap again to have Rahi teleport to Brother's location.",
-        AbilityType.LSHIFT,
-        "/assets/characters/rahi/hero_send_bot.svg"
-      ),
-      new Ability(
-        55,
         "SHIELD OF JUSTICE",
         "Send projectile to shield allies, blinding enemies in path.",
         AbilityType.E,
-        "/assets/characters/rahi/hero_send_shield.svg"
+        "/assets/characters/rahi/hero_send_shield.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
-        56,
+        55,
         "LAUGH IT OFF",
         "Gain personal shield which increases over time.",
         AbilityType.Q,
-        "/assets/characters/rahi/hero_shield_self.svg"
+        "/assets/characters/rahi/hero_shield_self.svg",
+        false,
+        [],
+        [],
+        []
       ),
     ];
   }

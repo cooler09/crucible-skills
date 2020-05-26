@@ -11,42 +11,66 @@ export default class DrakahlData {
         "Jink",
         "Jet quickly in your current direction.",
         AbilityType.PASSIVE,
-        "/assets/characters/drakahl/fighter_air_dash.svg"
+        "/assets/characters/drakahl/fighter_air_dash.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         21,
         "CHOP",
         "Strike with vibron axe.",
         AbilityType.LEFT_CLICK,
-        "/assets/characters/drakahl/fighter_primary.svg"
+        "/assets/characters/drakahl/fighter_primary.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         22,
         "SONIC PULSE",
         "Fire Sonic Pulse from vibron axe.",
         AbilityType.RIGHT_CLICK,
-        "/assets/characters/drakahl/fighter_quiver_strike.svg"
+        "/assets/characters/drakahl/fighter_quiver_strike.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         23,
         "RUSH",
         "Dash in the direction your camera is facing.",
         AbilityType.LSHIFT,
-        "/assets/characters/drakahl/fighter_rush.svg"
+        "/assets/characters/drakahl/fighter_rush.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         24,
         "RESONATING AXE",
         "Your axe hums with power. Choose between a spinning damage over time area attack or a stunning area attack. While resonating, Chop becomes Resonating Spin: Spinning attack that bleeds all enemies. While resonating, Sonic Pulse becomes Resonating Quake: Shockwave attack that stuns and damages nearby opponents.",
         AbilityType.E,
-        "/assets/characters/drakahl/fighter_resonate.svg"
+        "/assets/characters/drakahl/fighter_resonate.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         25,
         "ENRAGED ROAR",
         "You become enraged. Choose between a life-stealing claw attack or a ranged grab attack. While enraged, Chop becomes Enraged Claw: Claw attack that generates healing over time. While enraged, Sonic Pulse becomes Enraged Grab: Short-range attack that pulls one enemy towards you.",
         AbilityType.Q,
-        "/assets/characters/drakahl/fighter_roar.svg"
+        "/assets/characters/drakahl/fighter_roar.svg",
+        false,
+        [],
+        [],
+        []
       ),
     ];
   }

@@ -10,43 +10,67 @@ export default class ToscaData {
         96,
         "Works Well Under Pressure",
         "Interact with object in games faster.",
-        AbilityType.LEFT_CLICK,
-        "/assets/characters/tosca/inventor_interact_speed.svg"
+        AbilityType.PASSIVE,
+        "/assets/characters/tosca/inventor_interact_speed.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         91,
         "FIRE",
         "Fires a scattershot of acid bullets.",
         AbilityType.LEFT_CLICK,
-        "/assets/characters/tosca/inventor_primary.svg"
+        "/assets/characters/tosca/inventor_primary.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         92,
         "ADHESIVE ALPHA",
         "Throw explosive compound inflicting damage and slowing target.",
         AbilityType.RIGHT_CLICK,
-        "/assets/characters/tosca/inventor_grenade.svg"
+        "/assets/characters/tosca/inventor_grenade.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         93,
         "BLINK",
         "Short-range teleport in the direction of movement. Passes through obstacles.",
         AbilityType.LSHIFT,
-        "/assets/characters/tosca/inventor_blink.svg"
+        "/assets/characters/tosca/inventor_blink.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         94,
         "X-RAY GOGGLES",
         "Immediately detect all opponents within 50 meters in front of you.",
         AbilityType.E,
-        "/assets/characters/tosca/inventor_passive.svg"
+        "/assets/characters/tosca/inventor_passive.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         95,
         "ELECTRO-CLOUD",
         "Create a smoke screen which disrupts enemy detection and blocks line of sight.",
         AbilityType.Q,
-        "/assets/characters/tosca/inventor_smokescreen.svg"
+        "/assets/characters/tosca/inventor_smokescreen.svg",
+        false,
+        [],
+        [],
+        []
       ),
     ];
   }

@@ -10,43 +10,67 @@ export default class ShakirriData {
         76,
         "STARLOCK ENERGY",
         "Pistol energy regenerates over time.",
-        AbilityType.LEFT_CLICK,
-        "/assets/characters/shakirri/duelist_passive.svg"
+        AbilityType.PASSIVE,
+        "/assets/characters/shakirri/duelist_passive.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         71,
         "SHOOT / SWING",
         "Pistol stance: Fire your pistol. Sword stance: Attack with your sword.",
         AbilityType.LEFT_CLICK,
-        "/assets/characters/shakirri/duelist_pistol_fire.svg"
+        "/assets/characters/shakirri/duelist_pistol_fire.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         72,
         "DISRUPTING STRIKE / AIM DOWN SIGHTS",
         "In sword stance, unleash an energy wave that disrupts opponents. In pistol stance, hold to improve weapon accuracy.",
         AbilityType.RIGHT_CLICK,
-        "/assets/characters/shakirri/duelist_disarming_strike.svg"
+        "/assets/characters/shakirri/duelist_disarming_strike.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         73,
         "WEAPON SWAP",
         "Toggle between sword and pistol as your primary weapon. Sword stance moves faster.",
         AbilityType.LSHIFT,
-        "/assets/characters/shakirri/duelist_weapon_swap_sword.svg"
+        "/assets/characters/shakirri/duelist_weapon_swap_sword.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         74,
         "HOLO-SHIELD",
         "Deploys a force shield that deflects projectiles and blocks melee attacks.",
         AbilityType.E,
-        "/assets/characters/shakirri/duelist_deflect.svg"
+        "/assets/characters/shakirri/duelist_deflect.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         75,
         "FORCE DOME",
         "Creates dome that blocks enemy attacks and prevents enemies from crossing.",
         AbilityType.Q,
-        "/assets/characters/shakirri/duelist_bubble.svg"
+        "/assets/characters/shakirri/duelist_bubble.svg",
+        false,
+        [],
+        [],
+        []
       ),
     ];
   }

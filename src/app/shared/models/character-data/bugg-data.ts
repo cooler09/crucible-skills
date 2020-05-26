@@ -10,43 +10,67 @@ export default class BuggData {
         16,
         "Anti-Grav",
         "Move the same speed in all directions, regardless of facing.",
-        AbilityType.Q,
-        "/assets/characters/bugg/robotanist_passive.svg"
+        AbilityType.PASSIVE,
+        "/assets/characters/bugg/robotanist_passive.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         11,
         "SPRAY",
         "Damages opponents and activates seed pods.",
         AbilityType.LEFT_CLICK,
-        "/assets/characters/bugg/robotanist_primary.svg"
+        "/assets/characters/bugg/robotanist_primary.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         12,
         "SEED POD",
         "Fires a seed pod that can be activated by spraying.",
         AbilityType.RIGHT_CLICK,
-        "/assets/characters/bugg/robotanist_thrusters.svg"
+        "/assets/characters/bugg/robotanist_thrusters.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         13,
         "THRUSTERS",
         "Thrusters propel you forward and vertically.",
         AbilityType.LSHIFT,
-        "/assets/characters/bugg/robotanist_shield_burst.svg"
+        "/assets/characters/bugg/robotanist_shield_burst.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         14,
         "CROP DUST",
         "Creates a slowing, damaging, area of effect beneath you.",
         AbilityType.E,
-        "/assets/characters/bugg/robotanist_crop_dust.svg"
+        "/assets/characters/bugg/robotanist_crop_dust.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         15,
         "SHIELD BURST",
         "You, your seed pods, your plants, and nearby allies gain a temporary overshield.",
         AbilityType.Q,
-        "/assets/characters/bugg/robotanist_seed_pod.svg"
+        "/assets/characters/bugg/robotanist_seed_pod.svg",
+        false,
+        [],
+        [],
+        []
       ),
     ];
   }

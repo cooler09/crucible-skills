@@ -10,43 +10,67 @@ export default class EarlData {
         36,
         "Turbofire",
         "Firing weapons creates Turbofire, increasing rate of fire.",
-        AbilityType.Q,
-        "/assets/characters/earl/minigunner_passive.svg"
+        AbilityType.PASSIVE,
+        "/assets/characters/earl/minigunner_passive.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         31,
         "FIRE",
         "Fires Misty, increasing Turbofire. Turbofire increases fire rate over time.",
         AbilityType.LEFT_CLICK,
-        "/assets/characters/earl/minigunner_primary.svg"
+        "/assets/characters/earl/minigunner_primary.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         32,
         "UPSHIFT",
         "Fires a burst of explosive rounds and increases Turbofire.",
         AbilityType.RIGHT_CLICK,
-        "/assets/characters/earl/minigunner_upshift.svg"
+        "/assets/characters/earl/minigunner_upshift.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         33,
         "AFTERBURNER",
         "Rocket forward at high speed.",
         AbilityType.LSHIFT,
-        "/assets/characters/earl/minigunner_afterburner.svg"
+        "/assets/characters/earl/minigunner_afterburner.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         34,
         "BLOWBACK VENTS",
         "Knock enemies back and block projectiles in immediate area.",
         AbilityType.E,
-        "/assets/characters/earl/minigunner_airhorn.svg"
+        "/assets/characters/earl/minigunner_airhorn.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         35,
         "TANKING UP",
         "Drink a refreshing beverage to immediately restore health.",
         AbilityType.Q,
-        "/assets/characters/earl/minigunner_drink.svg"
+        "/assets/characters/earl/minigunner_drink.svg",
+        false,
+        [],
+        [],
+        []
       ),
     ];
   }

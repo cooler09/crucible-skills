@@ -10,43 +10,67 @@ export default class SummerData {
         86,
         "Heat",
         "Abilities generate heat. If overheated, abilities shut down for 5 seconds.",
-        AbilityType.LEFT_CLICK,
-        "/assets/characters/summer/pyro_passive.svg"
+        AbilityType.PASSIVE,
+        "/assets/characters/summer/pyro_passive.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         81,
         "FLAMETHROWERS",
         "Fires a continuous cone of flame. Enemies do not block line of fire. Generates heat. Abilities shut down when overheated.",
         AbilityType.LEFT_CLICK,
-        "/assets/characters/summer/pyro_primary.svg"
+        "/assets/characters/summer/pyro_primary.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         82,
         "FIREBALL",
         "Fires a long-range fireball that explodes on impact. Generates heat.",
         AbilityType.RIGHT_CLICK,
-        "/assets/characters/summer/pyro_jumpjets.svg"
+        "/assets/characters/summer/pyro_jumpjets.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         83,
         "FIREPULSE THRUSTERS",
         "Jump up and forward. Generates heat.",
         AbilityType.LSHIFT,
-        "/assets/characters/summer/pyro_eruption.svg"
+        "/assets/characters/summer/pyro_eruption.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         84,
         "IGNITION SPARK",
         "Creates a blast that knocks you and opponents back. Generates heat.",
         AbilityType.E,
-        "/assets/characters/summer/pyro_air_blast.svg"
+        "/assets/characters/summer/pyro_air_blast.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         85,
         "MAGMA SPIRAL",
         "Creates circular pattern of flaming magma. Generates heat.",
         AbilityType.Q,
-        "/assets/characters/summer/pyro_fireball.svg"
+        "/assets/characters/summer/pyro_fireball.svg",
+        false,
+        [],
+        [],
+        []
       ),
     ];
   }
