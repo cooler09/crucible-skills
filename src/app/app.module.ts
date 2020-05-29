@@ -25,6 +25,7 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { AbilityContainerComponent } from './shared/ability-container/ability-container.component';
+import { DetailedViewComponent } from './shared/detailed-view/detailed-view.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { AbilityContainerComponent } from './shared/ability-container/ability-co
     SkillTreeComponent,
     SkillComponent,
     AbilityContainerComponent,
+    DetailedViewComponent,
   ],
   imports: [
     BrowserModule,

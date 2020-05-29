@@ -19,6 +19,7 @@
           [desc]="ability.multiDesc[i]"
           [type]="ability.type"
           [imagePath]="ability.multiImagePath[i]"
+          (mouseenter)="mouseEnter(ability, i)"
         ></app-ability>
       </div>
     </div>
@@ -47,5 +48,6 @@
     [desc]="ability.desc"
     [type]="ability.type"
     [imagePath]="ability.imagePath"
+    (mouseenter)="mouseEnter(ability, 0)"
   ></app-ability>
 </div>

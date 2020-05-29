@@ -71,6 +71,9 @@ export default class MockData {
     let chr = new Character(
       "1",
       "Ajonah",
+      "800 (3% every level)",
+      "6.5 m/s",
+      "Medium",
       "/assets/characters/ajonah/ajonah.jpg",
       "bg-ajonah",
       "bg-ajonah-alt",
@@ -82,6 +85,9 @@ export default class MockData {
     chr = new Character(
       "2",
       "Bugg",
+      "700 (3% every level)",
+      "4.5 m/s (increased from 4.5 m/s to 5.5 m/s at level 2 by Realigned Gyros)",
+      "Small",
       "/assets/characters/bugg.jpg",
       "bg-bugg",
       "bg-bugg-alt",
@@ -93,6 +99,9 @@ export default class MockData {
     chr = new Character(
       "3",
       "Captain Mendoza",
+      "800 (3% every level)",
+      "5.5 m/s",
+      "Medium",
       "/assets/characters/cpt_mendoza.jpg",
       "bg-mendoza",
       "bg-mendoza-alt",
@@ -104,6 +113,9 @@ export default class MockData {
     chr = new Character(
       "4",
       "Drakahl",
+      "1100 (3% every level)",
+      "6.0 m/s",
+      "Large",
       "/assets/characters/drakahl.jpg",
       "bg-drakahl",
       "bg-drakahl-alt",
@@ -115,6 +127,9 @@ export default class MockData {
     chr = new Character(
       "5",
       "Earl",
+      "1600 (3% every level)",
+      "6.5 m/s",
+      "Large",
       "/assets/characters/earl.jpg",
       "bg-earl",
       "bg-earl-alt",
@@ -126,6 +141,9 @@ export default class MockData {
     chr = new Character(
       "6",
       "Rahi and Brother",
+      "1200 (3% every level)",
+      "6.5 m/s",
+      "Large",
       "/assets/characters/rahi.jpg",
       "bg-rahi",
       "bg-rahi-alt",
@@ -137,6 +155,9 @@ export default class MockData {
     chr = new Character(
       "7",
       "Sazan",
+      "800 (3% every level)",
+      "6.0 m/s",
+      "Medium",
       "/assets/characters/sazan.jpg",
       "bg-sazan",
       "bg-sazan-alt",
@@ -148,6 +169,9 @@ export default class MockData {
     chr = new Character(
       "8",
       "Shakirri",
+      "800 (3% every level)",
+      "5.5 m/s (pistol stance) 8.25 m/s (sword stance)",
+      "Medium",
       "/assets/characters/shakirri.jpg",
       "bg-shakirri",
       "bg-shakirri-alt",
@@ -159,6 +183,9 @@ export default class MockData {
     chr = new Character(
       "9",
       "Summer",
+      "1200 (3% every level)",
+      "5.5 m/s",
+      "Medium",
       "/assets/characters/summer.jpg",
       "bg-summer",
       "bg-summer-alt",
@@ -170,6 +197,9 @@ export default class MockData {
     chr = new Character(
       "10",
       "Tosca",
+      "600 (3% every level)",
+      "4.5 m/s",
+      "Small",
       "/assets/characters/tosca.jpg",
       "bg-tosca",
       "bg-tosca-alt",

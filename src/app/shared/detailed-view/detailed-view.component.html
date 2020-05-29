@@ -1,0 +1,31 @@
+<div class="white-border" *ngIf="displayedSkill">
+  <div class="p-2 d-flex bg-dark-blue">
+    <img
+      class="p-3 skill-selected rounded-border"
+      style="width: 150px;"
+      [src]="displayedSkill.imagePath"
+    />
+    <div class="p-2">
+      <h2 class="p-2">{{ displayedSkill.name }}</h2>
+      <p class="p-2">Level {{ displayedSkill.levelReq }}</p>
+    </div>
+  </div>
+  <div class="bg-md-blue p-2 px-5 text-center">
+    <span>{{ displayedSkill.desc }}</span>
+  </div>
+</div>
+<div class="white-border" *ngIf="displayedAbility">
+  <div class="p-2 d-flex bg-dark-blue">
+    <img
+      class="p-3 skill-selected rounded-border"
+      style="width: 150px;"
+      [src]="displayedAbility.imagePath"
+    />
+    <div class="p-2">
+      <h2 class="p-2">{{ displayedAbility.name }}</h2>
+    </div>
+  </div>
+  <div class="bg-md-blue p-2 px-5 text-center">
+    <span>{{ displayedAbility.desc }}</span>
+  </div>
+</div>

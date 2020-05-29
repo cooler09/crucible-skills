@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { Ability } from "../models/ability";
 
 @Component({
@@ -8,6 +8,7 @@ import { Ability } from "../models/ability";
 })
 export class AbilityContainerComponent implements OnInit {
   @Input() ability: Ability;
+  @Output() displayAbility = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
@@ -25,5 +26,8 @@ export class AbilityContainerComponent implements OnInit {
     if (this.currentIndex < 0) {
       this.currentIndex = this.ability.multiName.length - 1;
     }
+  }
+  mouseEnter(ability: Ability, index: number) {
+    this.displayAbility.emit({ ability, index });
   }
 }

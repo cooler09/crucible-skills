@@ -4,6 +4,9 @@ import { SkillTree } from "./skill-tree";
 export class Character {
   id: string;
   name: string;
+  health: string;
+  speed: string;
+  size: string;
   imagePath: string;
   selectedCss: string;
   selectedCssAlt: string;
@@ -13,6 +16,9 @@ export class Character {
   constructor(
     id: string,
     name: string,
+    health: string,
+    size: string,
+    speed: string,
     imagePath: string,
     selectedCss: string,
     selectedCssAlt: string,
@@ -24,5 +30,8 @@ export class Character {
     this.selectedCss = selectedCss;
     this.selectedCssAlt = selectedCssAlt;
     this.selectedSvgCss = selectedSvgCss;
+    this.health = health;
+    this.size = size;
+    this.speed = speed;
   }
 }

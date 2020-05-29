@@ -6,6 +6,7 @@ import { Subscription } from "rxjs";
 import { ActivatedRoute } from "@angular/router";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { WINDOW } from "../app.module";
+import { Ability } from "../shared/models/ability";
 
 @Component({
   selector: "app-home",
@@ -16,6 +17,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   characters: Character[];
   selectedCharacter: Character;
   displayedSkill: Skill;
+  displayedAbility: Ability;
+  multiAbilityIndex: number = 0;
 
   subscription: Subscription;
 
@@ -105,6 +108,14 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
   displaySkill(skill: Skill) {
     this.displayedSkill = skill;
+    this.displayedAbility = null;
+  }
+  displayAbility(data: any) {
+    if (data) {
+      this.displayedSkill = null;
+      this.displayedAbility = data.ability;
+      this.multiAbilityIndex = data.index;
+    }
   }
   generateUrl() {
     let skillTree = this.selectedCharacter.skillTree;

@@ -10,11 +10,29 @@
     </div>
   </div>
   <div class="row text-center text-white bg-dark">
-    <div class="col-2"></div>
-    <div class="col-8 p-2">
+    <div class="col-2 d-none d-sm-block"></div>
+    <div class="col-md-8 p-2">
       <h1>{{ selectedCharacter.name }}</h1>
+      <div class="d-flex justify-content-center">
+        <span class="p-1 text-right" style="flex: 45%;">Health:</span>
+        <span class="p-1 text-left" style="flex: 55%;">
+          {{ selectedCharacter.health }}
+        </span>
+      </div>
+      <div class="d-flex justify-content-center">
+        <span class="p-1 text-right" style="flex: 45%;">Speed:</span>
+        <span class="p-1 text-left" style="flex: 55%;">
+          {{ selectedCharacter.speed }}
+        </span>
+      </div>
+      <div class="d-flex justify-content-center">
+        <span class="p-1 text-right" style="flex: 45%;">Size:</span>
+        <span class="p-1 text-left" style="flex: 55%;">
+          {{ selectedCharacter.size }}
+        </span>
+      </div>
     </div>
-    <div class="col-2 p-2">
+    <div class="col-md-2 p-2">
       <button
         class="shadow"
         title="Copy sharable url"
@@ -37,26 +55,16 @@
       class="col-md-2 p-1"
       *ngFor="let ability of selectedCharacter.abilities"
       [ability]="ability"
+      (displayAbility)="displayAbility($event)"
     ></app-ability-container>
   </div>
   <div class="row p-3">
     <div class="col-md-6 p-0 text-white">
-      <div class="white-border" *ngIf="displayedSkill">
-        <div class="p-2 d-flex bg-dark-blue">
-          <img
-            class="p-3 skill-selected rounded-border"
-            style="width: 150px;"
-            [src]="displayedSkill.imagePath"
-          />
-          <div class="p-2">
-            <h2 class="p-2">{{ displayedSkill.name }}</h2>
-            <p class="p-2">Level {{ displayedSkill.levelReq }}</p>
-          </div>
-        </div>
-        <div class="bg-md-blue p-2 px-5 text-center">
-          <span>{{ displayedSkill.desc }}</span>
-        </div>
-      </div>
+      <app-detailed-view
+        [displayedSkill]="displayedSkill"
+        [displayedAbility]="displayedAbility"
+        [multiAbilityIndex]="multiAbilityIndex"
+      ></app-detailed-view>
     </div>
     <div class="col-md-6 bg-md-blue white-border">
       <div class="row text-center text-white bg-dark-blue">
