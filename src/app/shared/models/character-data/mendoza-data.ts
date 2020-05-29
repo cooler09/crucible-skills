@@ -11,35 +11,55 @@ export default class MendozaData {
         "FIRE",
         "Fires rapid shots from pulse rifle.",
         AbilityType.LEFT_CLICK,
-        "/assets/characters/mendoza/marine_primary.svg"
+        "/assets/characters/mendoza/marine_primary.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         42,
         "AIM DOWN SIGHTS",
         "Hold to improve rifle accuracy. Slows movement.",
         AbilityType.RIGHT_CLICK,
-        "/assets/characters/mendoza/marine_ads.svg"
+        "/assets/characters/mendoza/marine_ads.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         43,
         "SPRINT",
         "Tap or hold down to move faster.",
         AbilityType.LSHIFT,
-        "/assets/characters/mendoza/marine_sprint.svg"
+        "/assets/characters/mendoza/marine_sprint.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         44,
         "FLASH GRENADE",
         "Throws flash grenade which blinds enemies.",
         AbilityType.E,
-        "/assets/characters/mendoza/marine_grenade.svg"
+        "/assets/characters/mendoza/marine_grenade.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         45,
         "SUPPLY DROP",
         "Calls down a med kit and bunker. Bunker knocks back opponents on landing.",
         AbilityType.Q,
-        "/assets/characters/mendoza/marine_bunker.svg"
+        "/assets/characters/mendoza/marine_bunker.svg",
+        false,
+        [],
+        [],
+        []
       ),
     ];
   }

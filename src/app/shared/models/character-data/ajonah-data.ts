@@ -11,35 +11,55 @@ export default class AjonahData {
         "HIP FIRE",
         "Fires harpoon.",
         AbilityType.LEFT_CLICK,
-        "/assets/characters/ajonah/saboteur_primary.svg"
+        "/assets/characters/ajonah/saboteur_primary.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         2,
         "AIM DOWN SIGHTS",
         "Hold to improve harpoon accuracy and increase damage. Slows movement.",
         AbilityType.RIGHT_CLICK,
-        "/assets/characters/ajonah/saboteur_ads.svg"
+        "/assets/characters/ajonah/saboteur_ads.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         3,
         "GRAPPLING HOOK",
         "Fires a retracting grappling hook. Hold to swing.",
         AbilityType.LSHIFT,
-        "/assets/characters/ajonah/saboteur_grapple.svg"
+        "/assets/characters/ajonah/saboteur_grapple.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         4,
         "JAMMING SHROUD",
         "Deploys device that jams detection in this area. Tap again to detonate.",
         AbilityType.Q,
-        "/assets/characters/ajonah/saboteur_jammer.svg"
+        "/assets/characters/ajonah/saboteur_jammer.svg",
+        false,
+        [],
+        [],
+        []
       ),
       new Ability(
         5,
         "SQUID MINE",
         "Creates mine that follows target and explodes, slowing enemies.",
         AbilityType.E,
-        "/assets/characters/ajonah/saboteur_mine.svg"
+        "/assets/characters/ajonah/saboteur_mine.svg",
+        false,
+        [],
+        [],
+        []
       ),
     ];
   }

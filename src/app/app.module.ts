@@ -24,6 +24,7 @@ import { ClipboardModule } from "@angular/cdk/clipboard";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
+import { AbilityContainerComponent } from './shared/ability-container/ability-container.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MatButtonModule } from "@angular/material/button";
     AbilityComponent,
     SkillTreeComponent,
     SkillComponent,
+    AbilityContainerComponent,
   ],
   imports: [
     BrowserModule,

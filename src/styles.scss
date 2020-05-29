@@ -39,6 +39,24 @@ body {
   margin-top: 50px;
   margin-left: 50px;
 }
+
+.skill-size {
+  width: 50px;
+}
+@media only screen and (max-width: 600px) {
+  .vl {
+    border-left: 6px solid white;
+    height: 230px;
+    position: absolute;
+
+    margin-top: 30px;
+    margin-left: 25px;
+  }
+
+  .skill-size {
+    width: 30px;
+  }
+}
 .opac-50 {
   opacity: 0.5;
 }
