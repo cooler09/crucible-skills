@@ -2,6 +2,8 @@ import { Ability } from "../ability";
 import { AbilityType } from "../ability-type.enum";
 import { Skill } from "../skill";
 import { SkillTree } from "../skill-tree";
+import { AbilityInput } from "../ability-input.enum";
+import { SkillBonus } from "../skill-bonus";
 
 export default class ShakirriData {
   static loadAbilities(): Ability[] {
@@ -10,68 +12,176 @@ export default class ShakirriData {
         76,
         "STARLOCK ENERGY",
         "Pistol energy regenerates over time.",
-        AbilityType.PASSIVE,
-        "/assets/characters/shakirri/duelist_passive.svg",
-        false,
-        [],
-        [],
-        []
+        AbilityInput.PASSIVE,
+        AbilityType.Utility,
+        "/assets/characters/shakirri/duelist_passive.svg"
       ),
       new Ability(
         71,
         "SHOOT / SWING",
         "Pistol stance: Fire your pistol. Sword stance: Attack with your sword.",
-        AbilityType.LEFT_CLICK,
-        "/assets/characters/shakirri/duelist_pistol_fire.svg",
-        false,
-        [],
-        [],
-        []
-      ),
+        AbilityInput.LEFT_CLICK,
+        AbilityType.Weapon,
+        "/assets/characters/shakirri/duelist_pistol_fire.svg"
+      ).setMultiAbility([
+        new Ability(
+          71,
+          "SHOOT",
+          "Fire your pistol.",
+          AbilityInput.LEFT_CLICK,
+          AbilityType.Weapon,
+          "/assets/characters/shakirri/duelist_pistol_fire.svg"
+        )
+          .addDamage("55 (2x 110 crit)")
+          .addRateOfFire("2.2 per second")
+          .addDetails(
+            "The starlock pistol fires from a pool of energy which constantly regenerates"
+          )
+          .addNotes([
+            "Range – 250 m",
+            "Damage Falloff Begins – 40 m",
+            "Damage Falloff Ends – 100 m",
+            "Energy Pool Size – 6, regenerates every 2.5 seconds",
+          ])
+          .addSkillBonuses([
+            new SkillBonus("Starlock Capacitor – Available at Level 1", [
+              "Pistol energy is increased from 6 to 8.",
+            ]),
+            new SkillBonus("Freezelock Pistol – Available at Level 3", [
+              "Pistol shots slow opponents by 10% for 1.5 seconds, to a maximum of 30%.",
+            ]),
+          ]),
+        new Ability(
+          71,
+          "Slash",
+          "Slash two times, dealing damage with each swing.",
+          AbilityInput.LEFT_CLICK,
+          AbilityType.Weapon,
+          "/assets/characters/shakirri/duelist_pistol_fire.svg"
+        )
+          .addDamage("65 per swing")
+          .addRateOfFire("Two swings in 1.2 seconds")
+          .addNotes(["Range – 3 m", "Slash Width – 0 – 4.6 m"])
+          .addSkillBonuses([
+            new SkillBonus("Extended Lunge – Available at Level 1", [
+              "Sword range is increased by 25% for Slash and Disrupting Strike.",
+            ]),
+            new SkillBonus("Synergistic Blade – Available at Level 3", [
+              "Your sword deals 3% extra damage for each pistol energy you have.",
+            ]),
+          ]),
+      ]),
       new Ability(
         72,
         "DISRUPTING STRIKE / AIM DOWN SIGHTS",
         "In sword stance, unleash an energy wave that disrupts opponents. In pistol stance, hold to improve weapon accuracy.",
-        AbilityType.RIGHT_CLICK,
-        "/assets/characters/shakirri/duelist_disarming_strike.svg",
-        false,
-        [],
-        [],
-        []
-      ),
+        AbilityInput.RIGHT_CLICK,
+        AbilityType.Weapon,
+        "/assets/characters/shakirri/duelist_disarming_strike.svg"
+      ).setMultiAbility([
+        new Ability(
+          72,
+          "DISRUPTING STRIKE",
+          "A powerful long range wave attack that disrupts enemies.",
+          AbilityInput.RIGHT_CLICK,
+          AbilityType.Weapon,
+          "/assets/characters/shakirri/duelist_disarming_strike.svg"
+        )
+          .addDetails(
+            "Disrupting strike stops attacked enemy’s interact and abilities"
+          )
+          .addCooldown("14 seconds")
+          .addDamage("80")
+          .addNotes(["Range – 8 m", "Width – 3.5 m", "Silence – 1.5 seconds"])
+          .addSkillBonuses([
+            new SkillBonus("Extended Lunge – Available at Level 1", [
+              "Sword range is increased by 25% for Slash and Disrupting Strike.",
+            ]),
+            new SkillBonus("Synergistic Blade – Available at Level 3", [
+              "Your sword deals 3% extra damage for each pistol energy you have.",
+            ]),
+            new SkillBonus("Strike to the Heart – Available at Level 5", [
+              "Disrupting Strike applies a power damage over time effect of 1500 damage over 3 minutes.",
+            ]),
+          ]),
+        new Ability(
+          72,
+          "AIM DOWN SIGHTS",
+          "Slows movement but greatly increases accuracy.",
+          AbilityInput.RIGHT_CLICK,
+          AbilityType.Weapon,
+          "/assets/characters/shakirri/duelist_disarming_strike.svg"
+        )
+          .addDamage("55 (2x 110 crit)")
+          .addDetails(
+            "The starlock pistol fires from a pool of energy which constantly regenerates"
+          )
+          .addRateOfFire("2.2 per second")
+          .addNotes(["Movement speed – 2.5 m/s"])
+          .addSkillBonuses([
+            new SkillBonus("Starlock Capacitor – Available at Level 1", [
+              "Pistol energy is increased from 6 to 8.",
+            ]),
+            new SkillBonus("Freezelock Pistol – Available at Level 3", [
+              "Pistol shots slow opponents by 10% for 1.5 seconds, to a maximum of 30%.",
+            ]),
+          ]),
+      ]),
       new Ability(
         73,
         "WEAPON SWAP",
         "Toggle between sword and pistol as your primary weapon. Sword stance moves faster.",
-        AbilityType.LSHIFT,
-        "/assets/characters/shakirri/duelist_weapon_swap_sword.svg",
-        false,
-        [],
-        [],
-        []
-      ),
+        AbilityInput.LSHIFT,
+        AbilityType.Utility,
+        "/assets/characters/shakirri/duelist_weapon_swap_sword.svg"
+      )
+        .addCooldown("0.5 seconds")
+        .addDetails("Sword stance moves faster."),
       new Ability(
         74,
         "HOLO-SHIELD",
         "Deploys a force shield that deflects projectiles and blocks melee attacks.",
-        AbilityType.E,
-        "/assets/characters/shakirri/duelist_deflect.svg",
-        false,
-        [],
-        [],
-        []
-      ),
+        AbilityInput.E,
+        AbilityType.Utility,
+        "/assets/characters/shakirri/duelist_deflect.svg"
+      )
+        .addCooldown("6 seconds")
+        .addDetails("Projectiles deflected return to where player is aiming")
+        .addNotes(["Shield Duration – 2 seconds"])
+        .addSkillBonuses([
+          new SkillBonus("Shield of Honor – Available at Level 1", [
+            "Your holo-shield width is extended to cover a wider area.",
+          ]),
+          new SkillBonus("Empowered Deflect – Available at Level 2", [
+            "Deflected attacks deal 50% more damage.",
+          ]),
+        ]),
       new Ability(
         75,
         "FORCE DOME",
         "Creates dome that blocks enemy attacks and prevents enemies from crossing.",
-        AbilityType.Q,
-        "/assets/characters/shakirri/duelist_bubble.svg",
-        false,
-        [],
-        [],
-        []
-      ),
+        AbilityInput.Q,
+        AbilityType.Utility,
+        "/assets/characters/shakirri/duelist_bubble.svg"
+      )
+        .addCooldown("25 seconds")
+        .addDetails(
+          "Force dome blocks incoming enemy attacks and prevents enemies from leaving or entering"
+        )
+        .addNotes([
+          "AoE Radius – 5 m",
+          "Health – 800",
+          "Shield Degeneration – 160 per second",
+          "Duration – 5 seconds",
+        ])
+        .addSkillBonuses([
+          new SkillBonus("Force Dome Overcharge – Available at Level 4", [
+            "Force Dome lasts longer (7.5 seconds) and has more health (800 health).",
+          ]),
+          new SkillBonus("Restorative Dome – Available at Level 5", [
+            "Force Dome heals you and allies inside it, for 10 health 4 times per second.",
+          ]),
+        ]),
     ];
   }
   static loadSkillTree(): SkillTree {

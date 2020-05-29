@@ -1,8 +1,6 @@
 export enum AbilityType {
-  LEFT_CLICK = "Left Click",
-  LSHIFT = "LShift",
-  Q = "Q",
-  E = "E",
-  RIGHT_CLICK = "Right Click",
-  PASSIVE = "Passive",
+  Utility = "Utility",
+  Weapon = "Weapon",
+  WeaponSwap = "Weapon Swap",
+  PowerUp = "Power Up",
 }

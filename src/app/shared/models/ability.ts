@@ -1,34 +1,65 @@
 import { AbilityType } from "./ability-type.enum";
+import { SkillBonus } from "./skill-bonus";
+import { AbilityInput } from "./ability-input.enum";
 
 export class Ability {
   id: number;
   name: string;
-  multiName: string[];
   desc: string;
-  multiDesc: string[];
-  multiAbility: boolean;
+  damage: string;
+  cooldown: string;
+  rateOfFire: string;
+  details: string;
+  input: AbilityInput;
   type: AbilityType;
   imagePath: string;
-  multiImagePath: string[];
+  additionalNotes: string[];
+  skillBonuses: SkillBonus[];
+  multiAbility: boolean;
+  abilities: Ability[];
   constructor(
     id: number,
     name: string,
     desc: string,
+    input: AbilityInput,
     type: AbilityType,
-    imagePath: string,
-    multiAbility: boolean,
-    multiDesc: string[],
-    multiName: string[],
-    multiImagePath: string[]
+    imagePath: string
   ) {
     this.id = id;
     this.name = name;
-    this.multiName = multiName;
     this.desc = desc;
-    this.multiDesc = multiDesc;
-    this.multiAbility = multiAbility;
-    this.type = type;
     this.imagePath = imagePath;
-    this.multiImagePath = multiImagePath;
+    this.input = input;
+    this.type = type;
+    this.multiAbility = false;
+  }
+  setMultiAbility(abilities: Ability[]): Ability {
+    this.multiAbility = true;
+    this.abilities = abilities;
+    return this;
+  }
+  addNotes(additionalNotes: string[]): Ability {
+    this.additionalNotes = additionalNotes;
+    return this;
+  }
+  addSkillBonuses(skillBonuses: SkillBonus[]): Ability {
+    this.skillBonuses = skillBonuses;
+    return this;
+  }
+  addDamage(damage: string) {
+    this.damage = damage;
+    return this;
+  }
+  addCooldown(cooldown: string) {
+    this.cooldown = cooldown;
+    return this;
+  }
+  addDetails(details: string) {
+    this.details = details;
+    return this;
+  }
+  addRateOfFire(rateOfFire: string) {
+    this.rateOfFire = rateOfFire;
+    return this;
   }
 }

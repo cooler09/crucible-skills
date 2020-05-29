@@ -11,15 +11,15 @@
     <div class="carousel-inner">
       <div
         class="carousel-item"
-        *ngFor="let name of ability.multiName; let i = index"
+        *ngFor="let a of ability.abilities; let i = index"
         [class.active]="currentIndex === i"
       >
         <app-ability
-          [name]="name"
-          [desc]="ability.multiDesc[i]"
-          [type]="ability.type"
-          [imagePath]="ability.multiImagePath[i]"
-          (mouseenter)="mouseEnter(ability, i)"
+          [name]="a.name"
+          [desc]="a.desc"
+          [input]="a.input"
+          [imagePath]="a.imagePath"
+          (mouseenter)="mouseEnter(a)"
         ></app-ability>
       </div>
     </div>
@@ -46,8 +46,8 @@
     *ngIf="!ability.multiAbility"
     [name]="ability.name"
     [desc]="ability.desc"
-    [type]="ability.type"
+    [input]="ability.input"
     [imagePath]="ability.imagePath"
-    (mouseenter)="mouseEnter(ability, 0)"
+    (mouseenter)="mouseEnter(ability)"
   ></app-ability>
 </div>

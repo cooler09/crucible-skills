@@ -19,27 +19,20 @@
     <img
       class="p-3 skill-selected rounded-border"
       style="width: 150px;"
-      [src]="
-        displayedAbility.multiAbility
-          ? displayedAbility.multiImagePath[multiAbilityIndex]
-          : displayedAbility.imagePath
-      "
+      [src]="displayedAbility.imagePath"
     />
     <div class="p-2">
       <h2 class="p-2">
-        {{
-          displayedAbility.multiAbility
-            ? displayedAbility.multiName[multiAbilityIndex]
-            : displayedAbility.name
-        }}
+        {{ displayedAbility.name }}
       </h2>
+    </div>
+    <div class="p-1 d-flex justify-content-center">
+      <div class="p-1 white-border bg-dark-blue rounded-border-lt">
+        {{ displayedAbility.type }}
+      </div>
     </div>
   </div>
   <div class="bg-md-blue p-2 px-5 text-center">
-    <span>{{
-      displayedAbility.multiAbility
-        ? displayedAbility.multiDesc[multiAbilityIndex]
-        : displayedAbility.desc
-    }}</span>
+    <span>{{ displayedAbility.desc }}</span>
   </div>
 </div>

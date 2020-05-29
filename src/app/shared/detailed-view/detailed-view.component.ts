@@ -10,7 +10,6 @@ import { Ability } from "../models/ability";
 export class DetailedViewComponent implements OnInit {
   @Input() displayedSkill: Skill;
   @Input() displayedAbility: Ability;
-  @Input() multiAbilityIndex: number = 0;
   constructor() {}
 
   ngOnInit(): void {}

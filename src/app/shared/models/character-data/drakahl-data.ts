@@ -2,6 +2,8 @@ import { Ability } from "../ability";
 import { AbilityType } from "../ability-type.enum";
 import { Skill } from "../skill";
 import { SkillTree } from "../skill-tree";
+import { AbilityInput } from "../ability-input.enum";
+import { SkillBonus } from "../skill-bonus";
 
 export default class DrakahlData {
   static loadAbilities(): Ability[] {
@@ -10,68 +12,155 @@ export default class DrakahlData {
         26,
         "Jink",
         "Jet quickly in your current direction.",
-        AbilityType.PASSIVE,
-        "/assets/characters/drakahl/fighter_air_dash.svg",
-        false,
-        [],
-        [],
-        []
+        AbilityInput.PASSIVE,
+        AbilityType.Utility,
+        "/assets/characters/drakahl/fighter_air_dash.svg"
       ),
       new Ability(
         21,
         "CHOP",
         "Strike with vibron axe.",
-        AbilityType.LEFT_CLICK,
-        "/assets/characters/drakahl/fighter_primary.svg",
-        false,
-        [],
-        [],
-        []
-      ),
+        AbilityInput.LEFT_CLICK,
+        AbilityType.Weapon,
+        "/assets/characters/drakahl/fighter_primary.svg"
+      )
+        .addDetails("Drakahl swings his vibron axe in a 4 part sequence.")
+        .addRateOfFire("1.25 swings per second")
+        .addDamage("85 damage")
+        .addNotes(["Range – 3.5 m", "Width – 1.5 – 6 m"])
+        .addSkillBonuses([
+          new SkillBonus("Maiming Blow – Available at Level 1", [
+            "Chop applies a DoT to targets under 50% health. Damage applied is 25 damage over 5 seconds.",
+          ]),
+          new SkillBonus("Second Wind – Available at Level 1", [
+            "Chop attacks that hit reduce the cooldown of your Rush (1 second per successful hit).",
+          ]),
+        ]),
       new Ability(
         22,
         "SONIC PULSE",
         "Fire Sonic Pulse from vibron axe.",
-        AbilityType.RIGHT_CLICK,
-        "/assets/characters/drakahl/fighter_quiver_strike.svg",
-        false,
-        [],
-        [],
-        []
-      ),
+        AbilityInput.RIGHT_CLICK,
+        AbilityType.Weapon,
+        "/assets/characters/drakahl/fighter_quiver_strike.svg"
+      )
+        .addCooldown("4 seconds")
+        .addDamage("100 damage")
+        .addNotes(["Max Range – 200 m", "Projectile Speed – 50 m/s"])
+        .addSkillBonuses([
+          new SkillBonus("Incoming! – Available at Level 3", [
+            "Sonic Pulse destroys projectiles it comes into contact with.",
+          ]),
+          new SkillBonus("Sonic Shock – Available at Level 5", [
+            "Sonic Pulse slows targets for 25% for 3 seconds.",
+          ]),
+        ]),
       new Ability(
         23,
         "RUSH",
         "Dash in the direction your camera is facing.",
-        AbilityType.LSHIFT,
-        "/assets/characters/drakahl/fighter_rush.svg",
-        false,
-        [],
-        [],
-        []
-      ),
+        AbilityInput.LSHIFT,
+        AbilityType.Utility,
+        "/assets/characters/drakahl/fighter_rush.svg"
+      ).addNotes(["Duration – 0.5 seconds"]),
       new Ability(
         24,
-        "RESONATING AXE",
-        "Your axe hums with power. Choose between a spinning damage over time area attack or a stunning area attack. While resonating, Chop becomes Resonating Spin: Spinning attack that bleeds all enemies. While resonating, Sonic Pulse becomes Resonating Quake: Shockwave attack that stuns and damages nearby opponents.",
-        AbilityType.E,
-        "/assets/characters/drakahl/fighter_resonate.svg",
-        false,
-        [],
-        [],
-        []
-      ),
+        "",
+        "",
+        AbilityInput.E,
+        AbilityType.PowerUp,
+        "/assets/characters/drakahl/fighter_resonate.svg"
+      ).setMultiAbility([
+        new Ability(
+          24,
+          "RESONATING SPIN",
+          "Your axe hums with power. Choose between a spinning damage over time area attack or a stunning area attack.",
+          AbilityInput.E,
+          AbilityType.Weapon,
+          "/assets/characters/drakahl/fighter_resonate.svg"
+        )
+          .addDamage(
+            "8 Spins. Each spin deals 20 direct damage, and 30 damage over 10 seconds"
+          )
+          .addDetails("A spinning attack that bleeds enemies.")
+          .addCooldown("12 seconds")
+          .addNotes(["Duration – 2.5 seconds", "AoE Radius – 4 m"]),
+        new Ability(
+          24,
+          "RESONATING QUAKE",
+          "Your axe hums with power. Choose between a spinning damage over time area attack or a stunning area attack.",
+          AbilityInput.E,
+          AbilityType.Weapon,
+          "/assets/characters/drakahl/fighter_resonate.svg"
+        )
+          .addCooldown("12 seconds")
+          .addDetails(
+            "Create a 360° ground shockwave in the area around you that stuns enemies."
+          )
+          .addDamage("25 – 50 damage")
+          .addNotes([
+            "Duration – 2.5 seconds",
+            "AoE Radius – 5 m",
+            "Stun Duration – 1.25 seconds",
+          ]),
+      ]),
       new Ability(
         25,
         "ENRAGED ROAR",
-        "You become enraged. Choose between a life-stealing claw attack or a ranged grab attack. While enraged, Chop becomes Enraged Claw: Claw attack that generates healing over time. While enraged, Sonic Pulse becomes Enraged Grab: Short-range attack that pulls one enemy towards you.",
-        AbilityType.Q,
-        "/assets/characters/drakahl/fighter_roar.svg",
-        false,
-        [],
-        [],
-        []
-      ),
+        "You become enraged. Choose between a life-stealing claw attack or a ranged grab attack.",
+        AbilityInput.Q,
+        AbilityType.PowerUp,
+        "/assets/characters/drakahl/fighter_roar.svg"
+      ).setMultiAbility([
+        new Ability(
+          25,
+          "ENRAGED CLAW",
+          "You become enraged. Choose between a life-stealing claw attack or a ranged grab attack.",
+          AbilityInput.Q,
+          AbilityType.Weapon,
+          "/assets/characters/drakahl/fighter_roar.svg"
+        )
+          .addDetails(
+            "Claw attack that grants a large heal on each successful attack."
+          )
+          .addCooldown("12 seconds")
+          .addDamage("60 damage")
+          .addNotes([
+            "Range – 4.25 m",
+            "Width – 2.5 m",
+            "Duration – 2.5 seconds",
+            "Healing – Enraged Claw grants healing based on the target attacked. Each individual heal is applied over 8 seconds.",
+            "Heals 240 health vs players",
+            "Heals 160 health vs creatures",
+            "Heals 80 health vs plants",
+          ])
+          .addSkillBonuses([
+            new SkillBonus("Abs of Plasteel – Available at Level 5", [
+              "Enraged Roar makes you invulnerable for 1.5 seconds.",
+            ]),
+          ]),
+        new Ability(
+          25,
+          "ENRAGED GRAB",
+          "You become enraged. Choose between a life-stealing claw attack or a ranged grab attack.",
+          AbilityInput.Q,
+          AbilityType.Weapon,
+          "/assets/characters/drakahl/fighter_roar.svg"
+        )
+          .addDamage("50 damage")
+          .addCooldown("12 seconds")
+          .addDetails("Short-range projectile that pulls one enemy to Drakahl.")
+          .addNotes([
+            "Range – 20 m",
+            "Projectile Speed – 80 m/s",
+            "Applies a 1 second silence on hit, before pull begins",
+          ])
+          .addSkillBonuses([
+            new SkillBonus("Abs of Plasteel – Available at Level 5", [
+              "Enraged Roar makes you invulnerable for 1.5 seconds.",
+            ]),
+          ]),
+      ]),
     ];
   }
   static loadSkillTree(): SkillTree {

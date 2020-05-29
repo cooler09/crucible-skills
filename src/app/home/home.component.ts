@@ -18,7 +18,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   selectedCharacter: Character;
   displayedSkill: Skill;
   displayedAbility: Ability;
-  multiAbilityIndex: number = 0;
 
   subscription: Subscription;
 
@@ -84,6 +83,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   characterClick(character: Character) {
     this.selectedCharacter = character;
     this.displayedSkill = character.skillTree.tierOneSkills[0];
+    this.displayedAbility = null;
   }
   skillSelected(data: any) {
     if (data) {
@@ -110,11 +110,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.displayedSkill = skill;
     this.displayedAbility = null;
   }
-  displayAbility(data: any) {
-    if (data) {
+  displayAbility(ability: Ability) {
+    if (ability) {
       this.displayedSkill = null;
-      this.displayedAbility = data.ability;
-      this.multiAbilityIndex = data.index;
+      this.displayedAbility = ability;
     }
   }
   generateUrl() {

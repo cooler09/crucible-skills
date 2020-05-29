@@ -17,25 +17,27 @@ export class AbilityContainerComponent implements OnInit {
 
   next() {
     this.currentIndex += 1;
-    if (this.currentIndex >= this.ability.multiName.length) {
+    if (this.currentIndex >= this.ability.abilities.length) {
       this.currentIndex = 0;
     }
-    this.displayAbility.emit({
-      ability: this.ability,
-      index: this.currentIndex,
-    });
+    if (this.ability.multiAbility) {
+      this.displayAbility.emit(this.ability.abilities[this.currentIndex]);
+    } else {
+      this.displayAbility.emit(this.ability);
+    }
   }
   prev() {
     this.currentIndex -= 1;
     if (this.currentIndex < 0) {
-      this.currentIndex = this.ability.multiName.length - 1;
+      this.currentIndex = this.ability.abilities.length - 1;
     }
-    this.displayAbility.emit({
-      ability: this.ability,
-      index: this.currentIndex,
-    });
+    if (this.ability.multiAbility) {
+      this.displayAbility.emit(this.ability.abilities[this.currentIndex]);
+    } else {
+      this.displayAbility.emit(this.ability);
+    }
   }
-  mouseEnter(ability: Ability, index: number) {
-    this.displayAbility.emit({ ability, index });
+  mouseEnter(ability: Ability) {
+    this.displayAbility.emit(ability);
   }
 }

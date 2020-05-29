@@ -2,6 +2,7 @@ import { Ability } from "../ability";
 import { AbilityType } from "../ability-type.enum";
 import { Skill } from "../skill";
 import { SkillTree } from "../skill-tree";
+import { AbilityInput } from "../ability-input.enum";
 
 export default class SummerData {
   static loadAbilities(): Ability[] {
@@ -10,67 +11,49 @@ export default class SummerData {
         86,
         "Heat",
         "Abilities generate heat. If overheated, abilities shut down for 5 seconds.",
-        AbilityType.PASSIVE,
-        "/assets/characters/summer/pyro_passive.svg",
-        false,
-        [],
-        [],
-        []
+        AbilityInput.PASSIVE,
+        AbilityType.Utility,
+        "/assets/characters/summer/pyro_passive.svg"
       ),
       new Ability(
         81,
         "FLAMETHROWERS",
         "Fires a continuous cone of flame. Enemies do not block line of fire. Generates heat. Abilities shut down when overheated.",
-        AbilityType.LEFT_CLICK,
-        "/assets/characters/summer/pyro_primary.svg",
-        false,
-        [],
-        [],
-        []
+        AbilityInput.LEFT_CLICK,
+        AbilityType.Utility,
+        "/assets/characters/summer/pyro_primary.svg"
       ),
       new Ability(
         82,
         "FIREBALL",
         "Fires a long-range fireball that explodes on impact. Generates heat.",
-        AbilityType.RIGHT_CLICK,
-        "/assets/characters/summer/pyro_jumpjets.svg",
-        false,
-        [],
-        [],
-        []
+        AbilityInput.RIGHT_CLICK,
+        AbilityType.Utility,
+        "/assets/characters/summer/pyro_jumpjets.svg"
       ),
       new Ability(
         83,
         "FIREPULSE THRUSTERS",
         "Jump up and forward. Generates heat.",
-        AbilityType.LSHIFT,
-        "/assets/characters/summer/pyro_eruption.svg",
-        false,
-        [],
-        [],
-        []
+        AbilityInput.LSHIFT,
+        AbilityType.Utility,
+        "/assets/characters/summer/pyro_eruption.svg"
       ),
       new Ability(
         84,
         "IGNITION SPARK",
         "Creates a blast that knocks you and opponents back. Generates heat.",
-        AbilityType.E,
-        "/assets/characters/summer/pyro_air_blast.svg",
-        false,
-        [],
-        [],
-        []
+        AbilityInput.E,
+        AbilityType.Utility,
+        "/assets/characters/summer/pyro_air_blast.svg"
       ),
       new Ability(
         85,
         "MAGMA SPIRAL",
         "Creates circular pattern of flaming magma. Generates heat.",
-        AbilityType.Q,
-        "/assets/characters/summer/pyro_fireball.svg",
-        false,
-        [],
-        [],
-        []
+        AbilityInput.Q,
+        AbilityType.Utility,
+        "/assets/characters/summer/pyro_fireball.svg"
       ),
     ];
   }
