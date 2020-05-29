@@ -20,12 +20,20 @@ export class AbilityContainerComponent implements OnInit {
     if (this.currentIndex >= this.ability.multiName.length) {
       this.currentIndex = 0;
     }
+    this.displayAbility.emit({
+      ability: this.ability,
+      index: this.currentIndex,
+    });
   }
   prev() {
     this.currentIndex -= 1;
     if (this.currentIndex < 0) {
       this.currentIndex = this.ability.multiName.length - 1;
     }
+    this.displayAbility.emit({
+      ability: this.ability,
+      index: this.currentIndex,
+    });
   }
   mouseEnter(ability: Ability, index: number) {
     this.displayAbility.emit({ ability, index });
