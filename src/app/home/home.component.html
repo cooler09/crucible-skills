@@ -46,7 +46,7 @@
       </button>
     </div>
   </div>
-  <div class="row p-2">
+  <div class="row p-0 p-sm-2">
     <div
       *ngIf="selectedCharacter.abilities.length === 5"
       class="col-md-1"
@@ -58,7 +58,7 @@
       (displayAbility)="displayAbility($event)"
     ></app-ability-container>
   </div>
-  <div class="row p-3">
+  <div class="row p-sm-3 p-0">
     <div class="col-md-6 p-0 text-white">
       <app-detailed-view
         [displayedSkill]="displayedSkill"
