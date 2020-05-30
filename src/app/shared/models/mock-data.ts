@@ -74,7 +74,7 @@ export default class MockData {
       "800 (3% every level)",
       "6.5 m/s",
       "Medium",
-      "/assets/characters/ajonah/ajonah.jpg",
+      "/assets/characters/ajonah.webp",
       "bg-ajonah",
       "bg-ajonah-alt",
       "svg-ajonah"
@@ -88,7 +88,7 @@ export default class MockData {
       "700 (3% every level)",
       "4.5 m/s (increased from 4.5 m/s to 5.5 m/s at level 2 by Realigned Gyros)",
       "Small",
-      "/assets/characters/bugg.jpg",
+      "/assets/characters/bugg.webp",
       "bg-bugg",
       "bg-bugg-alt",
       "svg-bugg"
@@ -102,7 +102,7 @@ export default class MockData {
       "800 (3% every level)",
       "5.5 m/s",
       "Medium",
-      "/assets/characters/cpt_mendoza.jpg",
+      "/assets/characters/cpt_mendoza.webp",
       "bg-mendoza",
       "bg-mendoza-alt",
       "svg-mendoza"
@@ -116,7 +116,7 @@ export default class MockData {
       "1100 (3% every level)",
       "6.0 m/s",
       "Large",
-      "/assets/characters/drakahl.jpg",
+      "/assets/characters/drakahl.webp",
       "bg-drakahl",
       "bg-drakahl-alt",
       "svg-drakahl"
@@ -130,7 +130,7 @@ export default class MockData {
       "1600 (3% every level)",
       "6.5 m/s",
       "Large",
-      "/assets/characters/earl.jpg",
+      "/assets/characters/earl.webp",
       "bg-earl",
       "bg-earl-alt",
       "svg-earl"
@@ -144,7 +144,7 @@ export default class MockData {
       "1200 (3% every level)",
       "6.5 m/s",
       "Large",
-      "/assets/characters/rahi.jpg",
+      "/assets/characters/rahi.webp",
       "bg-rahi",
       "bg-rahi-alt",
       "svg-rahi"
@@ -158,7 +158,7 @@ export default class MockData {
       "800 (3% every level)",
       "6.0 m/s",
       "Medium",
-      "/assets/characters/sazan.jpg",
+      "/assets/characters/sazan.webp",
       "bg-sazan",
       "bg-sazan-alt",
       "svg-sazan"
@@ -172,7 +172,7 @@ export default class MockData {
       "800 (3% every level)",
       "5.5 m/s (pistol stance) 8.25 m/s (sword stance)",
       "Medium",
-      "/assets/characters/shakirri.jpg",
+      "/assets/characters/shakirri.webp",
       "bg-shakirri",
       "bg-shakirri-alt",
       "svg-shakirri"
@@ -186,7 +186,7 @@ export default class MockData {
       "1200 (3% every level)",
       "5.5 m/s",
       "Medium",
-      "/assets/characters/summer.jpg",
+      "/assets/characters/summer.webp",
       "bg-summer",
       "bg-summer-alt",
       "svg-summer"
@@ -200,7 +200,7 @@ export default class MockData {
       "600 (3% every level)",
       "4.5 m/s",
       "Small",
-      "/assets/characters/tosca.jpg",
+      "/assets/characters/tosca.webp",
       "bg-tosca",
       "bg-tosca-alt",
       "svg-tosca"
