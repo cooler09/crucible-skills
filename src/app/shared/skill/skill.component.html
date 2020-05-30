@@ -3,5 +3,10 @@
   [class.skill-selected]="selected"
   [class.skill-unselected]="!selected"
 >
-  <img class="skill-size" [class.svg]="!selected" [src]="skill.imagePath" />
+  <img
+    class="skill-size"
+    [class.svg]="!selected"
+    [alt]="skill.name"
+    [src]="skill.imagePath"
+  />
 </div>
