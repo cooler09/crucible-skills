@@ -7,7 +7,7 @@
       [src]="displayedSkill.imagePath"
     />
     <div class="p-2">
-      <h2 class="p-2">{{ displayedSkill.name }}</h2>
+      <h2 class="p-2 m-0">{{ displayedSkill.name }}</h2>
       <p class="p-2">Level {{ displayedSkill.levelReq }}</p>
     </div>
   </div>
@@ -24,7 +24,7 @@
       [src]="displayedAbility.imagePath"
     />
     <div class="p-2 d-flex flex-wrap">
-      <h2 class="p-2" style="flex: 100%;">
+      <h2 class="p-2 m-0" style="flex: 100%;">
         {{ displayedAbility.name }}
       </h2>
       <div *ngIf="displayedAbility.damage" class="d-flex" style="flex: 100%;">
