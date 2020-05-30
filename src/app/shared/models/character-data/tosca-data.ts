@@ -3,6 +3,7 @@ import { AbilityType } from "../ability-type.enum";
 import { Skill } from "../skill";
 import { SkillTree } from "../skill-tree";
 import { AbilityInput } from "../ability-input.enum";
+import { SkillBonus } from "../skill-bonus";
 
 export default class ToscaData {
   static loadAbilities(): Ability[] {
@@ -17,20 +18,50 @@ export default class ToscaData {
       ),
       new Ability(
         91,
-        "FIRE",
+        "ACID SHOT",
         "Fires a scattershot of acid bullets.",
         AbilityInput.LEFT_CLICK,
-        AbilityType.Utility,
+        AbilityType.Weapon,
         "/assets/characters/tosca/inventor_primary.svg"
-      ),
+      )
+        .addDamage(
+          "Per pellet: 2 – 4 damage, and (7 – 14 damage over 12 seconds). 7 pellets per shot"
+        )
+        .addRateOfFire("2.6 per second")
+        .addNotes([
+          "Reload time of 2 seconds",
+          "Max Range – 125 m",
+          "Damage Falloff Starts – 18.75 m",
+          "Damage Falloff Ends – 50 m",
+          "Splash (AoE) Radius – 2 m",
+        ])
+        .addSkillBonuses([
+          new SkillBonus("Rappi-Shot Stabilizer – Available at Level 3", [
+            "Scattergun fire rate is increased from 2.6 per second to 3.1 per second. Weapon kick is decreased by 20%.",
+          ]),
+        ]),
       new Ability(
         92,
         "ADHESIVE ALPHA",
         "Throw explosive compound inflicting damage and slowing target.",
         AbilityInput.RIGHT_CLICK,
-        AbilityType.Utility,
+        AbilityType.Weapon,
         "/assets/characters/tosca/inventor_grenade.svg"
-      ),
+      )
+        .addDamage("25 – 75 (75 on a direct hit)")
+        .addCooldown("15 seconds")
+        .addDetails("Adhesive alpha travels in a steep arc.")
+        .addNotes([
+          "Max Throw Distance – 31.3 m",
+          "Projectile Lifetime – 10 seconds",
+          "AoE Radius – 4 m",
+          "Slows Enemies",
+        ])
+        .addSkillBonuses([
+          new SkillBonus("Alpha Spill – Available at Level 3", [
+            "Adhesive Alpha leaves behind an area lasting 8 seconds that damages enemies and slows their movement by 25% for 2 seconds. Applies 10 damage 4 times per second.",
+          ]),
+        ]),
       new Ability(
         93,
         "BLINK",
@@ -38,7 +69,21 @@ export default class ToscaData {
         AbilityInput.LSHIFT,
         AbilityType.Utility,
         "/assets/characters/tosca/inventor_blink.svg"
-      ),
+      )
+        .addCooldown("4 seconds")
+        .addDetails("Tosca can store two charges of Blink.")
+        .addNotes(["Blink Distance – 12.5 m"])
+        .addSkillBonuses([
+          new SkillBonus("Blink Booster– Available at Level 1", [
+            "Increase blink distance from 12.5 m to 15 m.",
+          ]),
+          new SkillBonus("Multi-charged Blink Vest – Available at Level 4", [
+            "Number of blinks increases from 2 to 3.",
+          ]),
+          new SkillBonus("Explosive Teleport – Available at Level 5", [
+            "Blinking leaves behind an explosion that detonates after a short delay, blinding enemies for 0.25 – 1.75 seconds. AoE radius is 6 m.",
+          ]),
+        ]),
       new Ability(
         94,
         "X-RAY GOGGLES",
@@ -46,7 +91,13 @@ export default class ToscaData {
         AbilityInput.E,
         AbilityType.Utility,
         "/assets/characters/tosca/inventor_passive.svg"
-      ),
+      )
+        .addCooldown("25 seconds")
+        .addSkillBonuses([
+          new SkillBonus("Z-Ray Lenses – Available at Level 3", [
+            "X-ray vision range increases from 50 m to 65 m and becomes 360 degree vision.",
+          ]),
+        ]),
       new Ability(
         95,
         "ELECTRO-CLOUD",
@@ -54,7 +105,14 @@ export default class ToscaData {
         AbilityInput.Q,
         AbilityType.Utility,
         "/assets/characters/tosca/inventor_smokescreen.svg"
-      ),
+      )
+        .addCooldown("30 seconds")
+        .addNotes(["AoE Radius – 10 m"])
+        .addSkillBonuses([
+          new SkillBonus("Isochronal Cloud – Available at Level 5", [
+            "Number of Electro-Cloud charges increases from 1 to 3, but clouds are smaller. Decreases cooldown by 9 seconds.",
+          ]),
+        ]),
     ];
   }
   static loadSkillTree(): SkillTree {

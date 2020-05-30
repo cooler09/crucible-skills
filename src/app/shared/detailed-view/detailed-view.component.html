@@ -21,18 +21,72 @@
       style="width: 150px;"
       [src]="displayedAbility.imagePath"
     />
-    <div class="p-2">
-      <h2 class="p-2">
+    <div class="p-2 d-flex flex-wrap">
+      <h2 class="p-2" style="flex: 100%;">
         {{ displayedAbility.name }}
       </h2>
-    </div>
-    <div class="p-1 d-flex justify-content-center">
-      <div class="p-1 white-border bg-dark-blue rounded-border-lt">
-        {{ displayedAbility.type }}
+      <div *ngIf="displayedAbility.damage" class="d-flex" style="flex: 100%;">
+        <span class="text-right p-1" style="flex: 35%;">Damage:</span>
+        <span class="p-1" style="flex: 65%;">{{
+          displayedAbility.damage
+        }}</span>
+      </div>
+      <div *ngIf="displayedAbility.cooldown" class="d-flex" style="flex: 100%;">
+        <span class="text-right p-1" style="flex: 35%;">Cooldown:</span>
+        <span class="p-1" style="flex: 65%;">{{
+          displayedAbility.cooldown
+        }}</span>
+      </div>
+      <div
+        *ngIf="displayedAbility.rateOfFire"
+        class="d-flex"
+        style="flex: 100%;"
+      >
+        <span class="text-right p-1" style="flex: 35%;">Rate Of Fire:</span>
+        <span class="p-1" style="flex: 65%;">{{
+          displayedAbility.rateOfFire
+        }}</span>
+      </div>
+      <div
+        *ngIf="displayedAbility.heatGenerated"
+        class="d-flex"
+        style="flex: 100%;"
+      >
+        <span class="text-right p-1" style="flex: 35%;">Head Generated:</span>
+        <span class="p-1" style="flex: 65%;">{{
+          displayedAbility.heatGenerated
+        }}</span>
+      </div>
+      <div *ngIf="displayedAbility.details" class="d-flex" style="flex: 100%;">
+        <span class="text-right p-1" style="flex: 35%;">Details:</span>
+        <span class="p-1" style="flex: 65%;">{{
+          displayedAbility.details
+        }}</span>
       </div>
     </div>
   </div>
-  <div class="bg-md-blue p-2 px-5 text-center">
-    <span>{{ displayedAbility.desc }}</span>
+  <div class="bg-md-blue p-2 px-5">
+    <p class="text-center">{{ displayedAbility.desc }}</p>
+    <div
+      *ngIf="
+        displayedAbility.additionalNotes &&
+        displayedAbility.additionalNotes.length > 0
+      "
+    >
+      <h3 class="m-0">Notes:</h3>
+      <ul>
+        <li *ngFor="let note of displayedAbility.additionalNotes">
+          {{ note }}
+        </li>
+      </ul>
+    </div>
+    <div *ngFor="let skillBonus of displayedAbility.skillBonuses">
+      <h3 class="m-0">{{ skillBonus.title }}:</h3>
+      <ul>
+        <li *ngFor="let point of skillBonus.bulletPoints">
+          {{ point }}
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

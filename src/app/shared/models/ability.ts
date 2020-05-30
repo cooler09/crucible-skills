@@ -9,6 +9,7 @@ export class Ability {
   damage: string;
   cooldown: string;
   rateOfFire: string;
+  heatGenerated: string;
   details: string;
   input: AbilityInput;
   type: AbilityType;
@@ -32,6 +33,9 @@ export class Ability {
     this.input = input;
     this.type = type;
     this.multiAbility = false;
+    this.skillBonuses = [];
+    this.additionalNotes = [];
+    this.abilities = [];
   }
   setMultiAbility(abilities: Ability[]): Ability {
     this.multiAbility = true;
@@ -40,6 +44,10 @@ export class Ability {
   }
   addNotes(additionalNotes: string[]): Ability {
     this.additionalNotes = additionalNotes;
+    return this;
+  }
+  addHeatGenerated(heat: string) {
+    this.heatGenerated = heat;
     return this;
   }
   addSkillBonuses(skillBonuses: SkillBonus[]): Ability {
